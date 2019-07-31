@@ -134,7 +134,10 @@ export default function NavBar(props) {
       <AppBar position="static">
         <Toolbar>
         <Link to="/home">
-          <Button className="AppTitle" color="inherit">Jammin App</Button>
+        <img id="logo" src="https://i.imgur.com/oTnHPUS.jpg" />
+        </Link>
+        <Link to="/home">
+          <Button className="AppTitle" color="inherit">MUSICAL CONNECTION</Button>
         </Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>

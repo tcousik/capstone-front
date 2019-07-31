@@ -13,7 +13,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
-import { green } from '@material-ui/core/colors';
+import { orange } from '@material-ui/core/colors';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -36,9 +36,9 @@ const rows = [
 
   const GreenCheckbox = withStyles({
     root: {
-      color: green[800],
+      color: orange[700],
       '&$checked': {
-        color: green[200],
+        color: orange[300],
       },
     },
     checked: {},

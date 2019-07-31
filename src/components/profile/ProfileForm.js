@@ -7,17 +7,17 @@ import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import { green } from '@material-ui/core/colors';
+import { orange } from '@material-ui/core/colors';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import swal from 'sweetalert'
 
 const ColorButton = withStyles(theme => ({
   root: {
-    color: theme.palette.getContrastText(green[800]),
-    backgroundColor: green[800],
+    color: theme.palette.getContrastText(orange[700]),
+    backgroundColor: orange[700],
     '&:hover': {
-      backgroundColor: green[800],
+      backgroundColor: orange[700],
     },
   },
 }))(Button);
@@ -78,10 +78,10 @@ const useStyles = makeStyles(theme => ({
   },
   notchedOutline: {
     borderWidth: "1px",
-    borderColor: "green !important"
+    borderColor: "purple !important"
   },
   submit: {
-    marginLeft: '133px'
+    marginLeft: '124px'
   }
 }));
 
@@ -120,7 +120,7 @@ export default function OutlinedInputAdornments() {
         className={clsx(classes.margin, classes.textField)}
         variant="outlined"
         label="Location"
-        value={values.experience}
+        value={values.location}
         onChange={handleChange('location')}
         InputProps={{
             classes: {

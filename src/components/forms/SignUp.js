@@ -5,17 +5,17 @@ import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import { green } from '@material-ui/core/colors';
+import { orange } from '@material-ui/core/colors';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const ColorButton = withStyles(theme => ({
   root: {
-    color: theme.palette.getContrastText(green[800]),
-    backgroundColor: green[800],
+    color: theme.palette.getContrastText(orange[700]),
+    backgroundColor: orange[700],
     '&:hover': {
-      backgroundColor: green[800],
+      backgroundColor: orange[700],
     },
   },
 }))(Button);
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
  },
  notchedOutline: {
    borderWidth: "1px",
-   borderColor: "green !important"
+   borderColor: "purple !important"
  }
 }));
 

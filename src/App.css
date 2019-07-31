@@ -8,7 +8,11 @@ a {
 }
 
 .MuiToolbar-root {
-  background-color: green;
+  background-color: #f57c00
+}
+
+span.MuiButton-label {
+  color: white;
 }
 
 .MuiCard-root {
@@ -32,8 +36,14 @@ a {
   margin-left: 30px;
 }
 
+#logo {
+  length: 50px;
+  width: 50px;
+}
+
 .Header {
   margin-top: 50px;
+  color: #730e95;
 }
 
 .CityDisplayer {
@@ -46,23 +56,22 @@ a {
   padding-bottom: 20px;
 }
 
-/* #root > div > div:nth-child(2) > div > div {
-  max-width: 450px;
-  width: 450px;
-} */
+div.MuiCardContent-root > h2 {
+  color: white;
+}
 
 div.MuiCardContent-root {
-  background-color: green;
+  background-color: #f57c00;
 }
 
 body > div.swal-overlay.swal-overlay--show-modal > div > div.swal-footer > div > button {
   color: white;
-  background-color: green;
+  background-color: #f57c00;
 }
 
 .homeHead {
   margin-top: 260px;
-  background-color: green;
+  background-color: #f57c00;
   color: white;
   margin-right: 540px;
   margin-left: 540px;
