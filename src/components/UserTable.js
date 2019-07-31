@@ -20,6 +20,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import MailIcon from '@material-ui/icons/Mail';
 import FilterListIcon from '@material-ui/icons/FilterList';
+import swal from 'sweetalert'
 
 function createData(name, instrument, experience) {
   return { name, instrument, experience };
@@ -29,7 +30,7 @@ const rows = [
   createData('Ned', 'Guitar', 'Beginner'),
   createData('Natalie', 'Drums', 'Professional'),
   createData('Tim', 'Keyboard', 'Professional'),
-  createData('Yvonne', 'Guitar', 'Intermediate'),
+  createData('Yvonne', 'Guitar', 'Experienced'),
   createData('Bob', 'Vocals', 'Professional'),
 ];
 
@@ -171,7 +172,7 @@ const EnhancedTableToolbar = props => {
       <div className={classes.actions}>
         {numSelected > 0 ? (
           <Tooltip title="Message">
-            <IconButton aria-label="mail">
+            <IconButton onClick={swal("Message sent to user!")} aria-label="mail">
               <MailIcon />
             </IconButton>
           </Tooltip>

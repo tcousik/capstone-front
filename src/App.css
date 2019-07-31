@@ -38,13 +38,33 @@ a {
 
 .CityDisplayer {
   margin-top: 70px;
+  margin-right: 40px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-bottom: 20px;
 }
 
-#root > div > div:nth-child(2) > div > div {
+/* #root > div > div:nth-child(2) > div > div {
   max-width: 450px;
+  width: 450px;
+} */
+
+div.MuiCardContent-root {
+  background-color: green;
+}
+
+body > div.swal-overlay.swal-overlay--show-modal > div > div.swal-footer > div > button {
+  color: white;
+  background-color: green;
+}
+
+.homeHead {
+  margin-top: 260px;
+  background-color: green;
+  color: white;
+  margin-right: 540px;
+  margin-left: 540px;
+  border-radius: 50px;
 }

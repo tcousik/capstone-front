@@ -30,12 +30,12 @@ export default function Breckenridge() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/waeWNtE.jpg"
-              title="Colorado Springs"
+              image="https://i.imgur.com/IYPlrT6.jpg"
+              title="Durango"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Colorado Springs
+                Durango
               </Typography>
             </CardContent>
           </CardActionArea>

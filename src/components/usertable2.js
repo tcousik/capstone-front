@@ -29,7 +29,7 @@ const rows = [
   createData('Ned', 'Guitar', 'Beginner'),
   createData('Natalie', 'Drums', 'Professional'),
   createData('Tim', 'Keyboard', 'Professional'),
-  createData('Yvonne', 'Guitar', 'Intermediate'),
+  createData('Yvonne', 'Guitar', 'Experienced'),
   createData('Bob', 'Vocals', 'Professional'),
 ];
 

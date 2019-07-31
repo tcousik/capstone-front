@@ -8,7 +8,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import UserTable from '../UserTable'
-import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   card: {
@@ -30,12 +29,12 @@ export default function Breckenridge() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/waeWNtE.jpg"
-              title="Colorado Springs"
+              image="https://i.imgur.com/MVbAHwo.jpg"
+              title="Breckenridge"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Colorado Springs
+                Breckenridge
               </Typography>
             </CardContent>
           </CardActionArea>

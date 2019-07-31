@@ -10,10 +10,10 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   card: {
-    width: 400,
+    width: 450,
   },
   media: {
-    height: 350,
+    height: 450,
   },
 });
 
@@ -28,11 +28,6 @@ export default function ProfilePic() {
           image="https://comicvine1.cbsistatic.com/uploads/square_small/2/26320/487898-charliebrown.png"
           title="Contemplative Reptile"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Username
-          </Typography>
-        </CardContent>
       </CardActionArea>
     </Card>
   );

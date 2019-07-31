@@ -7,37 +7,43 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import UserTable from '../UserTable'
+import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   card: {
     width: 550,
-    margin: '0 0 40px'
+    margin: 40,
+    height: 420,
   },
   media: {
     height: 350,
   },
 });
 
-export default function Denver() {
+export default function Breckenridge() {
   const classes = useStyles();
-
   return (
-    <Card className="cardz" className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="https://animals.sandiegozoo.org/sites/default/files/2016-11/animals_hero_lizards.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Denver
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Music Scene Text
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <div>
+      <div style={{ display:'flex', justifyContent:'center' }}>
+        <Card className="cardz" className={classes.card}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="https://i.imgur.com/yFbS1Zl.jpg"
+              title="Denver"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Denver
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
+      </div>
+      <div>
+      <UserTable />
+      </div>
+    </div>
   );
 }
