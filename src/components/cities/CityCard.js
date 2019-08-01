@@ -7,11 +7,13 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { withRouter } from 'react-router-dom'
+import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   card: {
     width: 550,
-    margin: '0 0 40px',
+    margin: 30,
     height: 420
   },
   media: {
@@ -19,18 +21,21 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CityCard(props) {
+function CityCard(props) {
   const classes = useStyles();
 
   return (
-    <Card className="cardz" className={classes.card}>
-      <CardActionArea>
+    <Card className={classes.card}>
+      <CardActionArea style={{color: green}}>
         <CardMedia
+          value={props.name}
           className={classes.media}
           image={props.image}
           title="CityPic"
         />
-        <CardContent>
+        <CardContent
+        onClick={(event) => props.history.push(`${event.target.innerText}`)}
+        >
           <Typography gutterBottom variant="h5" component="h2">
             {props.name}
           </Typography>
@@ -39,3 +44,5 @@ export default function CityCard(props) {
     </Card>
   );
 }
+
+export default withRouter(CityCard)

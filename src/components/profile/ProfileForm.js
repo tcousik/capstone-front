@@ -7,27 +7,56 @@ import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import { green } from '@material-ui/core/colors';
+import { orange } from '@material-ui/core/colors';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import swal from 'sweetalert'
 
 const ColorButton = withStyles(theme => ({
   root: {
-    color: theme.palette.getContrastText(green[800]),
-    backgroundColor: green[800],
+    color: theme.palette.getContrastText(orange[700]),
+    backgroundColor: orange[700],
     '&:hover': {
-      backgroundColor: green[800],
+      backgroundColor: orange[700],
     },
   },
 }))(Button);
 
-const ranges = [
+const ranges1 = [
+  {
+    value: 'Denver',
+    label: 'Denver'
+  },
+  {
+    value: 'Boulder',
+    label: 'Boulder',
+  },
+  {
+    value: 'Colorado Springs',
+    label: 'Colorado Springs',
+  },
+  {
+    value: 'Fort Collins',
+    label: 'Fort Collins',
+  },
+  {
+    value: 'Breckenridge',
+    label: 'Breckenridge'
+  },
+  {
+    value: 'Durango',
+    label: 'Durango',
+  }
+]
+
+const ranges2 = [
   {
     value: 'Beginner',
     label: 'Beginner',
   },
   {
-    value: 'Intermediate',
-    label: 'Intermediate',
+    value: 'Experienced',
+    label: 'Experienced',
   },
   {
     value: 'Professional',
@@ -39,6 +68,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+    width: 450,
   },
   margin: {
     margin: theme.spacing(2),
@@ -48,18 +78,20 @@ const useStyles = makeStyles(theme => ({
   },
   notchedOutline: {
     borderWidth: "1px",
-    borderColor: "green !important"
+    borderColor: "purple !important"
   },
+  submit: {
+    marginLeft: '124px'
+  }
 }));
 
 export default function OutlinedInputAdornments() {
   const classes = useStyles();
   const [values, setValues] = React.useState({
+    name: '',
     location: '',
-    password: '',
-    weight: '',
+    instrument: '',
     experience: '',
-    bio: ''
   });
 
   const handleChange = prop => event => {
@@ -84,7 +116,7 @@ export default function OutlinedInputAdornments() {
           }}
       />
       <TextField
-        id="outlined-adornment-amount"
+        select
         className={clsx(classes.margin, classes.textField)}
         variant="outlined"
         label="Location"
@@ -95,7 +127,13 @@ export default function OutlinedInputAdornments() {
               notchedOutline: classes.notchedOutline
             }
           }}
-      />
+      >
+        {ranges1.map(option => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
       <TextField
         id="outlined-adornment-instrument"
         className={clsx(classes.margin, classes.textField)}
@@ -122,21 +160,23 @@ export default function OutlinedInputAdornments() {
             }
           }}
       >
-        {ranges.map(option => (
+        {ranges2.map(option => (
           <MenuItem key={option.value} value={option.value}>
             {option.label}
           </MenuItem>
         ))}
       </TextField>
-      <ColorButton
-        type="submit"
-        fullWidth
-        color="primary"
-        variant="contained"
-        className={classes.submit}
-      >
-        Save
-      </ColorButton>
+      <Link to="/cities">
+        <ColorButton
+          type="submit"
+          fullWidth
+          color="primary"
+          variant="contained"
+          className={classes.submit}
+        >
+          Save
+        </ColorButton>
+      </Link>
     </div>
   );
 }

@@ -3,19 +3,19 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import { green } from '@material-ui/core/colors';
+import { orange } from '@material-ui/core/colors';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const ColorButton = withStyles(theme => ({
   root: {
-    color: theme.palette.getContrastText(green[800]),
-    backgroundColor: green[800],
+    color: theme.palette.getContrastText(orange[700]),
+    backgroundColor: orange[700],
     '&:hover': {
-      backgroundColor: green[800],
+      backgroundColor: orange[700],
     },
   },
 }))(Button);
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
    alignItems: 'center',
  },
  form: {
-   width: '100%', // Fix IE 11 issue.
+   width: '100%',
    marginTop: theme.spacing(1),
  },
  submit: {
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
  },
  notchedOutline: {
    borderWidth: "1px",
-   borderColor: "green !important"
+   borderColor: "purple !important"
  }
 }));
 
@@ -66,35 +66,37 @@ export default function SignUp() {
                  notchedOutline: classes.notchedOutline
                }
              }}
-           id="username"
-           label="Username"
-           name="username"
-           autoComplete="username"
+             id="username"
+            label="Username"
+            name="username"
+            autoComplete="username"
          />
          <TextField
-           variant="outlined"
-           margin="normal"
-           required
-           fullWidth
-           InputProps={{
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            InputProps={{
                classes: {
                  notchedOutline: classes.notchedOutline
                }
              }}
-           name="password"
-           label="Password"
-           type="password"
-           id="password"
-           autoComplete="current-password"
+            name="password"
+            label="Password"
+            type="password"
+            id="password"
+            autoComplete="current-password"
          />
-         <ColorButton
-           type="submit"
-           fullWidth
-           variant="contained"
-           className={classes.submit}
-         >
-           Sign Up
-         </ColorButton>
+         <Link to ="/profile">
+           <ColorButton
+              type="submit"
+              fullWidth
+              variant="contained"
+              className={classes.submit}
+           >
+             Sign Up
+           </ColorButton>
+          </Link>
        </form>
      </div>
    </Container>

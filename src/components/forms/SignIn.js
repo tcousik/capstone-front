@@ -6,15 +6,15 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import { green } from '@material-ui/core/colors';
+import { orange } from '@material-ui/core/colors';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 const ColorButton = withStyles(theme => ({
   root: {
-    color: theme.palette.getContrastText(green[800]),
-    backgroundColor: green[800],
+    color: theme.palette.getContrastText(orange[700]),
+    backgroundColor: orange[700],
     '&:hover': {
-      backgroundColor: green[800],
+      backgroundColor: orange[700],
     },
   },
 }))(Button);
@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
  },
  notchedOutline: {
    borderWidth: "1px",
-   borderColor: "green !important"
+   borderColor: "purple !important"
  },
 }));
 

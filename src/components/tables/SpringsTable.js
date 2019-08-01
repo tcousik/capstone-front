@@ -13,13 +13,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
-import { green } from '@material-ui/core/colors';
+import { orange } from '@material-ui/core/colors';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import MailIcon from '@material-ui/icons/Mail';
 import FilterListIcon from '@material-ui/icons/FilterList';
+import swal from 'sweetalert'
 
 function createData(name, instrument, experience) {
   return { name, instrument, experience };
@@ -35,9 +36,9 @@ const rows = [
 
   const GreenCheckbox = withStyles({
     root: {
-      color: green[800],
+      color: orange[700],
       '&$checked': {
-        color: green[200],
+        color: orange[300],
       },
     },
     checked: {},
@@ -162,8 +163,8 @@ const EnhancedTableToolbar = props => {
             {numSelected} selected
           </Typography>
         ) : (
-          <Typography variant="h6" id="tableTitle">
-            Musicians in City
+          <Typography style={{ color: 'white' }} variant="h6" id="tableTitle">
+            Musicians in Colorado Springs
           </Typography>
         )}
       </div>
@@ -171,7 +172,7 @@ const EnhancedTableToolbar = props => {
       <div className={classes.actions}>
         {numSelected > 0 ? (
           <Tooltip title="Message">
-            <IconButton aria-label="mail">
+            <IconButton onClick={swal("Message sent to user!")} aria-label="mail">
               <MailIcon />
             </IconButton>
           </Tooltip>
@@ -208,7 +209,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function EnhancedTable() {
+export default function SpringsTable() {
   const classes = useStyles();
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('instruments');
@@ -250,19 +251,6 @@ export default function EnhancedTable() {
     }
 
     setSelected(newSelected);
-  }
-
-  function handleChangePage(event, newPage) {
-    setPage(newPage);
-  }
-
-  function handleChangeRowsPerPage(event) {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
-  }
-
-  function handleChangeDense(event) {
-    setDense(event.target.checked);
   }
 
   const isSelected = name => selected.indexOf(name) !== -1;

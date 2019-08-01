@@ -7,7 +7,14 @@ import UserList from './components/UserList'
 import CityDisplayer from './components/cities/CityDisplayer'
 import ProfileContainer from './components/profile/ProfileContainer'
 import UserTable from './components/UserTable'
-import UserTable2 from './components/usertable2'
+import Denver from './components/cities/Denver'
+import Boulder from './components/cities/Boulder'
+import FortCollins from './components/cities/FortCollins'
+import ColoradoSprings from './components/cities/ColoradoSprings'
+import Durango from './components/cities/Durango'
+import Breckenridge from './components/cities/Breckenridge'
+import Home from './components/Home'
+
 
 export default class App extends Component {
   constructor(props) {
@@ -16,22 +23,22 @@ export default class App extends Component {
       users: [],
       cities: [{
         name: "Denver",
-        image: "https://animals.sandiegozoo.org/sites/default/files/2016-11/animals_hero_lizards.jpg"
+        image: "https://i.imgur.com/yFbS1Zl.jpg"
       }, {
         name: "Boulder",
-        image: "https://animals.sandiegozoo.org/sites/default/files/2016-11/animals_hero_lizards.jpg"
+        image: "https://i.imgur.com/EPTqmvA.jpg?2"
       }, {
         name: "Colorado Springs",
-        image: "https://animals.sandiegozoo.org/sites/default/files/2016-11/animals_hero_lizards.jpg"
+        image: "https://i.imgur.com/waeWNtE.jpg"
       }, {
         name: "Fort Collins",
-        image: "https://timedotcom.files.wordpress.com/2018/12/lion-conservators-center.jpg"
+        image: "https://i.imgur.com/euRsbax.jpg"
       }, {
         name: "Breckenridge",
-        image: "https://timedotcom.files.wordpress.com/2018/12/lion-conservators-center.jpg"
+        image: "https://i.imgur.com/MVbAHwo.jpg"
       }, {
         name: "Durango",
-        image: "https://timedotcom.files.wordpress.com/2018/12/lion-conservators-center.jpg"
+        image: "https://i.imgur.com/IYPlrT6.jpg"
       }]
     }
   }
@@ -55,8 +62,17 @@ export default class App extends Component {
           <Route path='/cities' render={ props => <CityDisplayer {...props} cities={this.state.cities}/>}/>
           <Route path='/profile' component={ProfileContainer} />
           <Route path='/login' component={FormsContainer} />
-          <h1 className="Header">WELCOME!</h1>
-          <UserTable />
+          <Route exact path='/Home' component={Home}  />
+
+          <Route path='/Denver' component={Denver} />
+          <Route path='/Boulder' component={Boulder} />
+          <Route path='/Colorado springs' component={ColoradoSprings} />
+          <Route path='/Fort collins' component={FortCollins} />
+          <Route path='/Durango' component={Durango} />
+          <Route path='/Breckenridge' component={Breckenridge} />
+
+          {/*<UserList users={this.state.users} />*/}
+
         </div>
       </Router>
     )

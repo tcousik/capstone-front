@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import DenverTable from '../tables/DenverTable'
+import DurangoTable from '../tables/DurangoTable'
 import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
@@ -30,19 +30,19 @@ export default function Breckenridge() {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="https://i.imgur.com/yFbS1Zl.jpg"
-              title="Denver"
+              image="https://i.imgur.com/IYPlrT6.jpg"
+              title="Durango"
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Denver
+                Durango
               </Typography>
             </CardContent>
           </CardActionArea>
         </Card>
       </div>
       <div>
-      <DenverTable />
+      <DurangoTable />
       </div>
     </div>
   );
