@@ -14,7 +14,7 @@ import ColoradoSprings from './components/cities/ColoradoSprings'
 import Durango from './components/cities/Durango'
 import Breckenridge from './components/cities/Breckenridge'
 import Home from './components/Home'
-import Inbox from './components/Inbox'
+import InboxContainer from './components/inbox/InboxContainer'
 
 export default class App extends Component {
   constructor(props) {
@@ -53,7 +53,7 @@ export default class App extends Component {
           <Route path='/cities' render={ props => <CityDisplayer {...props} cities={this.state.cities}/>}/>
           <Route path='/profile' component={ProfileContainer} />
           <Route path='/login' component={FormsContainer} />
-          <Route path='/inbox' component={Inbox} />
+          <Route path='/inbox' component={InboxContainer} />
           <Route exact path='/Home' component={Home}  />
 
           <Route path='/Denver' component={Denver} />

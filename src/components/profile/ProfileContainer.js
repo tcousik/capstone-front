@@ -5,7 +5,7 @@ import ProfileForm from './ProfileForm';
 
 export default function ProfileContainer() {
   return (
-    <div className="profile-container">
+    <div>
       <h1 className="Header">Profile Page</h1>
       <div className="ProfileContainer">
         <ProfPic2 />
