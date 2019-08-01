@@ -27,10 +27,10 @@ function createData(name, instrument, experience) {
 }
 
 const rows = [
-  createData('Ned', 'Guitar', 'Beginner'),
+  createData('Jessica', 'Guitar', 'Beginner'),
   createData('Natalie', 'Drums', 'Professional'),
-  createData('Tim', 'Keyboard', 'Professional'),
-  createData('Yvonne', 'Guitar', 'Experienced'),
+  createData('Tony', 'Keyboard', 'Professional'),
+  createData('Emma', 'Guitar', 'Experienced'),
   createData('Bob', 'Vocals', 'Professional'),
 ];
 

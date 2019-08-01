@@ -27,11 +27,11 @@ function createData(name, instrument, experience) {
 }
 
 const rows = [
-  createData('Ned', 'Guitar', 'Beginner'),
-  createData('Natalie', 'Drums', 'Professional'),
+  createData('Bob', 'Drums', 'Beginner'),
+  createData('Mark', 'Keyboard', 'Professional'),
   createData('Tim', 'Keyboard', 'Professional'),
-  createData('Yvonne', 'Guitar', 'Experienced'),
-  createData('Bob', 'Vocals', 'Professional'),
+  createData('Mary', 'Guitar', 'Experienced'),
+  createData('Brad', 'Vocals', 'Professional'),
 ];
 
   const GreenCheckbox = withStyles({

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
@@ -11,6 +11,7 @@ import { orange } from '@material-ui/core/colors';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import swal from 'sweetalert'
+
 
 const ColorButton = withStyles(theme => ({
   root: {
@@ -98,13 +99,10 @@ export default function OutlinedInputAdornments() {
     setValues({ ...values, [prop]: event.target.value });
   };
 
-  const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword });
-  };
-
   return (
     <div className={classes.root}>
       <TextField
+        onChange = {e => setValues(e.target.value)}
         id="outlined-simple-start-adornment"
         className={clsx(classes.margin, classes.textField)}
         variant="outlined"

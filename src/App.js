@@ -14,12 +14,13 @@ import ColoradoSprings from './components/cities/ColoradoSprings'
 import Durango from './components/cities/Durango'
 import Breckenridge from './components/cities/Breckenridge'
 import Home from './components/Home'
-
+import Inbox from './components/Inbox'
 
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      home: false,
       users: [],
       cities: [{
         name: "Denver",
@@ -43,25 +44,16 @@ export default class App extends Component {
     }
   }
 
-  componentDidMount(){
-    this.fetchUsers()
-  }
-
-  fetchUsers = () => {
-      let url = "http://localhost:3000/users"
-      fetch(url)
-      .then(response => response.json())
-      .then(result => this.setState({users: result}))
-  }
-
   render() {
     return (
+      <div className="App">
       <Router>
-        <div className="App">
+
           <NavBar />
           <Route path='/cities' render={ props => <CityDisplayer {...props} cities={this.state.cities}/>}/>
           <Route path='/profile' component={ProfileContainer} />
           <Route path='/login' component={FormsContainer} />
+          <Route path='/inbox' component={Inbox} />
           <Route exact path='/Home' component={Home}  />
 
           <Route path='/Denver' component={Denver} />
@@ -71,10 +63,8 @@ export default class App extends Component {
           <Route path='/Durango' component={Durango} />
           <Route path='/Breckenridge' component={Breckenridge} />
 
-          {/*<UserList users={this.state.users} />*/}
-
-        </div>
       </Router>
+      </div>
     )
   }
 }

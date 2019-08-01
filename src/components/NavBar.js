@@ -10,6 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
+import MailIcon from '@material-ui/icons/Mail';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
@@ -153,7 +154,10 @@ export default function NavBar(props) {
             </IconButton>
           </div>
           <Link to="/profile">
-            <Button color="inherit">Profile</Button>
+            <AccountCircle style={{marginRight: '20px'}}/>
+          </Link>
+          <Link to="/inbox">
+            <MailIcon style={{marginRight: '20px'}} />
           </Link>
           <Link to="/cities">
             <Button color="inherit">Cities</Button>

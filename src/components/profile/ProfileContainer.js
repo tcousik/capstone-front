@@ -1,14 +1,14 @@
 import React from 'react';
-import ProfilePic from './ProfilePic';
+import ProfPic2 from './ProfPic2';
 import ProfileForm from './ProfileForm';
 
 
 export default function ProfileContainer() {
   return (
-    <div>
+    <div className="profile-container">
       <h1 className="Header">Profile Page</h1>
       <div className="ProfileContainer">
-        <ProfilePic />
+        <ProfPic2 />
         <ProfileForm />
       </div>
     </div>

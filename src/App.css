@@ -69,21 +69,16 @@ body > div.swal-overlay.swal-overlay--show-modal > div > div.swal-footer > div >
   background-color: #f57c00;
 }
 
-.home {
-  background-color: #ffb64d;
-  background-size: cover;
-  height: 100%
-}
-
-/* .homeHead {
-  margin-top: 260px;
-  background-color: #f57c00;
-  color: white;
-  margin-right: 540px;
-  margin-left: 540px;
-  border-radius: 50px;
-} */
-
 div > h1 {
   color: #730e95
+}
+
+#bigLogo {
+  width: 400px;
+  height: 400px
+}
+
+.Home {
+  background-color: #ffb64d;
+  padding: 100px;
 }
