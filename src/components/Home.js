@@ -2,9 +2,10 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className="homeHead">
+    <body className="home">
       <h1>MUSICAL CONNECTION</h1>
-      <h2>meet up and make beats</h2>
-    </div>
+      <h3>Find musicians to jam with in your city</h3>
+      <img src="https://i.imgur.com/v5Ddb5Z.jpg" />
+    </body>
   )
 }

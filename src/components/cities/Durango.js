@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import UserTable from '../UserTable'
+import DurangoTable from '../tables/DurangoTable'
 import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
@@ -42,7 +42,7 @@ export default function Breckenridge() {
         </Card>
       </div>
       <div>
-      <UserTable />
+      <DurangoTable />
       </div>
     </div>
   );

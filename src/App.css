@@ -47,7 +47,7 @@ span.MuiButton-label {
 }
 
 .CityDisplayer {
-  margin-top: 70px;
+  margin-top: 30px;
   margin-right: 40px;
   display: flex;
   flex-direction: row;
@@ -69,11 +69,21 @@ body > div.swal-overlay.swal-overlay--show-modal > div > div.swal-footer > div >
   background-color: #f57c00;
 }
 
-.homeHead {
+.home {
+  background-color: #ffb64d;
+  background-size: cover;
+  height: 100%
+}
+
+/* .homeHead {
   margin-top: 260px;
   background-color: #f57c00;
   color: white;
   margin-right: 540px;
   margin-left: 540px;
   border-radius: 50px;
+} */
+
+div > h1 {
+  color: #730e95
 }
